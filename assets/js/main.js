@@ -17,7 +17,7 @@ const age = document.getElementById('age');
 
 
 //reagisco al click del button
-document.querySelector('button').addEventListener('click', function () {
+document.getElementById('generate').addEventListener('click', function () {
     console.log(age.value);
     console.log(distance.value);
 
@@ -46,10 +46,12 @@ document.querySelector('button').addEventListener('click', function () {
     document.querySelector('.user_cabin').innerHTML = Math.floor(Math.random() * (200 - 1) + 1);
     //genera valore intero tra 99999 e 100000
     document.querySelector('.user_code').innerHTML = Math.floor(Math.random() * (99999 - 10000) + 10000);
+});
 
-
-    //svuota campi
+//svuota campi
+document.getElementById('erase').addEventListener('click', function () {
     name.value = "";
     distance.value = "";
     age.value = "";
-});
+})
+
