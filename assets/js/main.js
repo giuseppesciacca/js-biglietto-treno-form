@@ -11,9 +11,10 @@ const discountUnder = 0.20;
 const discountOver = 0.40;
 
 //raccolto l'input dell'utente
+const name = document.getElementById('name');
+const distance = document.getElementById('distance');
 const age = document.getElementById('age');
 
-const distance = document.getElementById('distance');
 
 //reagisco al click del button
 document.querySelector('button').addEventListener('click', function () {
@@ -28,17 +29,27 @@ document.querySelector('button').addEventListener('click', function () {
         const discount = totalPrice * discountUnder
         const discountAmount = totalPrice - discount
         console.log(discountAmount)
+        document.querySelector('.price_ticket').innerHTML = `${discountAmount} €`;
     } else if (age.value > 65) {
         const discount = totalPrice * discountOver
         const discountAmount = totalPrice - discount
         console.log(discountAmount)
+        document.querySelector('.price_ticket').innerHTML = `${discountAmount} €`;
     } else {
         let totalPrice = unitPrice * distance.value;
         console.log(totalPrice)
+        document.querySelector('.price_ticket').innerHTML = `${totalPrice} €`;
     };
 
-    //svuota campi
-    age.value = "";
-    distance.value = "";
-});
+    document.querySelector('.user_data').innerHTML = name.value;
+    //genera valore intero tra 1 e 200
+    document.querySelector('.user_cabin').innerHTML = Math.floor(Math.random() * (200 - 1) + 1);
+    //genera valore intero tra 99999 e 100000
+    document.querySelector('.user_code').innerHTML = Math.floor(Math.random() * (99999 - 10000) + 10000);
 
+
+    //svuota campi
+    name.value = "";
+    distance.value = "";
+    age.value = "";
+});

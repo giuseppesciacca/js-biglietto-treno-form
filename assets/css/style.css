@@ -17,3 +17,7 @@ label {
 input {
     border: 2px solid var(--my-primary);
 }
+
+.nome_pass {
+    background-color: grey;
+}
