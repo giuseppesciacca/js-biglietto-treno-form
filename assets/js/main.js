@@ -22,8 +22,7 @@ document.getElementById('generate').addEventListener('click', function () {
     console.log(distance.value);
 
     //al click mostra questo blocco
-    document.querySelector('.ticket').innerHTML = `
-    
+    document.querySelector('.ticket').innerHTML = `    
     <div class="container bg-white py-3">
         <h3 class="fw-bold">DETTAGLIO PASSEGGERI</h3>
         <table class="table table-borderless border-top border-bottom text-black">
@@ -37,7 +36,7 @@ document.getElementById('generate').addEventListener('click', function () {
                 </tr>
             </thead>
             <tbody>
-                <tr class="">
+                <tr>
                     <td class="user_data fs-5 fw-bold bg_my_secondary pt-0 ps-3"></td>
                     <td class="type_ticket pt-4"></td>
                     <td class="user_cabin pt-4"></td>
@@ -46,7 +45,6 @@ document.getElementById('generate').addEventListener('click', function () {
                 </tr>
             </tbody>
         </table>
-
     </div>`
 
     let totalPrice = unitPrice * distance.value;
@@ -82,12 +80,6 @@ document.getElementById('erase').addEventListener('click', function () {
     name.value = "";
     distance.value = "";
     age.value = "";
-
-    document.querySelector('.user_data').innerHTML = "";
-    document.querySelector('.type_ticket').innerHTML = '';
-    document.querySelector('.user_cabin').innerHTML = "";
-    document.querySelector('.user_code').innerHTML = "";
-    document.querySelector('.price_ticket').innerHTML = ``;
 
     document.querySelector('.ticket').innerHTML = ""
 });

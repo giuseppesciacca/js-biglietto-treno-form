@@ -22,7 +22,7 @@ select {
 
 button:hover {
     color: var(--my-primary) !important;
-    border: 2px solid orange !important;
+    border: 1px solid orange !important;
 }
 
 button:active {
