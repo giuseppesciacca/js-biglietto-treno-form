@@ -54,4 +54,10 @@ document.getElementById('erase').addEventListener('click', function () {
     name.value = "";
     distance.value = "";
     age.value = "";
+
+    document.querySelector('.user_data').innerHTML = "";
+    document.querySelector('.type_ticket').innerHTML = '';
+    document.querySelector('.user_cabin').innerHTML = "";
+    document.querySelector('.user_code').innerHTML = "";
+    document.querySelector('.price_ticket').innerHTML = ``;
 });
