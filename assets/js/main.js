@@ -42,6 +42,7 @@ document.getElementById('generate').addEventListener('click', function () {
     };
 
     document.querySelector('.user_data').innerHTML = name.value;
+    document.querySelector('.type_ticket').innerHTML = 'Biglietto Standard';
     //genera valore intero tra 1 e 200
     document.querySelector('.user_cabin').innerHTML = Math.floor(Math.random() * (200 - 1) + 1);
     //genera valore intero tra 99999 e 100000

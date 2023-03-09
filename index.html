@@ -23,19 +23,14 @@
                 <div class="row pt-3 pb-5">
                     <div class="col d-flex flex-wrap justify-content-center">
                         <label class="col-12 text-center fw-semibold py-3" for="name">Nome Cognome</label>
-                        <input class="rounded-1" type="text" name="name" value="" placeholder="Name" id="name">
+                        <input class="rounded-1" type="text" name="name" value="" placeholder="Name" id="name" required>
                     </div>
 
                     <div class="col d-flex flex-wrap justify-content-center">
                         <label class="col-12 text-center fw-semibold py-3" for="name">Km da percorrere</label>
                         <input class="rounded-1" type="number" name="distance" value="" id="distance"
-                            placeholder="Distance">
+                            placeholder="Distance" required>
                     </div>
-
-                    <!--                     <div class="col d-flex flex-wrap justify-content-center">
-                        <label class="col-12 text-center fw-semibold py-3" for="name">Fascia d'età</label>
-                        <input class="rounded-1" type="number" name="age" id="age" value="" placeholder="Age">
-                    </div> -->
 
                     <div class="col d-flex flex-wrap justify-content-center">
                         <label class="col-12 text-center fw-semibold py-3" for="name">Fascia d'età</label>
@@ -80,7 +75,7 @@
                     <tbody>
                         <tr class="">
                             <td class="user_data fs-5 fw-bold"></td>
-                            <td>Biglietto Standard</td>
+                            <td class="type_ticket"></td>
                             <td class="user_cabin"></td>
                             <td class="user_code"></td>
                             <td class="price_ticket"></td>
