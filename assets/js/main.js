@@ -25,12 +25,12 @@ document.getElementById('generate').addEventListener('click', function () {
 
     /*     va applicato uno sconto del 20% per i minorenni
         va applicato uno sconto del 40% per gli over 65 */
-    if (age.value < 18) {
+    if (age.value == 'under') {
         const discount = totalPrice * discountUnder
         const discountAmount = totalPrice - discount
         console.log(discountAmount)
         document.querySelector('.price_ticket').innerHTML = `${discountAmount} €`;
-    } else if (age.value > 65) {
+    } else if (age.value == 'over') {
         const discount = totalPrice * discountOver
         const discountAmount = totalPrice - discount
         console.log(discountAmount)

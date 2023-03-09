@@ -14,7 +14,7 @@ label {
     color: var(--my-primary);
 }
 
-input {
+input, select {
     border: 2px solid var(--my-primary);
 }
 
