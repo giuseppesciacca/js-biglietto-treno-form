@@ -21,6 +21,34 @@ document.getElementById('generate').addEventListener('click', function () {
     console.log(age.value);
     console.log(distance.value);
 
+    //al click mostra questo blocco
+    document.querySelector('.ticket').innerHTML = `
+    
+    <div class="container bg-white py-3">
+        <h3 class="fw-bold">DETTAGLIO PASSEGGERI</h3>
+        <table class="table table-borderless border-top border-bottom text-black">
+            <thead>
+                <tr>
+                    <th class="w-25 fs-4 bg_my_secondary pt-3 ps-3 pb-0">NOME PASSEGGERO</th>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo biglietto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="user_data fs-5 fw-bold bg_my_secondary pt-0 ps-3"></td>
+                    <td class="type_ticket pt-4"></td>
+                    <td class="user_cabin pt-4"></td>
+                    <td class="user_code pt-4"></td>
+                    <td class="price_ticket pt-4"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>`
+
     let totalPrice = unitPrice * distance.value;
 
     /*     va applicato uno sconto del 20% per i minorenni
@@ -60,4 +88,6 @@ document.getElementById('erase').addEventListener('click', function () {
     document.querySelector('.user_cabin').innerHTML = "";
     document.querySelector('.user_code').innerHTML = "";
     document.querySelector('.price_ticket').innerHTML = ``;
+
+    document.querySelector('.ticket').innerHTML = ""
 });
