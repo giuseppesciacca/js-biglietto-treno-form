@@ -11,29 +11,34 @@ const discountUnder = 0.20;
 const discountOver = 0.40;
 
 //raccolto l'input dell'utente
-const age = document.getElementById('age').value;
+const age = document.getElementById('age');
 
-const distance = document.getElementById('distance').value;
+const distance = document.getElementById('distance');
 
 //reagisco al click del button
 document.querySelector('button').addEventListener('click', function () {
-    console.log(age);
-    console.log(distance);
+    console.log(age.value);
+    console.log(distance.value);
 
-    let totalPrice = unitPrice * distance;
-    if (age < 18) {
+    let totalPrice = unitPrice * distance.value;
+
+    /*     va applicato uno sconto del 20% per i minorenni
+        va applicato uno sconto del 40% per gli over 65 */
+    if (age.value < 18) {
         const discount = totalPrice * discountUnder
         const discountAmount = totalPrice - discount
         console.log(discountAmount)
-    } else if (age > 65) {
+    } else if (age.value > 65) {
         const discount = totalPrice * discountOver
         const discountAmount = totalPrice - discount
         console.log(discountAmount)
     } else {
-        let totalPrice = unitPrice * distance;
+        let totalPrice = unitPrice * distance.value;
         console.log(totalPrice)
     };
-})
 
-
+    //svuota campi
+    age.value = "";
+    distance.value = "";
+});
 
