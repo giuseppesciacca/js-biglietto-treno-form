@@ -13,16 +13,54 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-    <header id="site_header" class="py-3">
-        <h1 class="text-center text-white fw-bolder">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    </header>
+<body class="bg_my_primary">
 
     <main id="site_main">
-        <input type="number" name="age" id="age" value="" placeholder="Age">
-        <input type="number" name="distance" value="" id="distance" placeholder="Distance">
+        <section>
+            <h1 class="text-center text-white fw-bolder py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="container bg-white rounded-4 shadow">
 
-        <button>Calcola</button>
+                <div class="row pt-3 pb-5">
+                    <div class="col d-flex flex-wrap justify-content-center">
+                        <label class="col-12 text-center fw-semibold py-3" for="name">Nome Cognome</label>
+                        <input class="rounded-1" type="text" name="name" value="" placeholder="Name" id="name">
+                    </div>
+
+                    <div class="col d-flex flex-wrap justify-content-center">
+                        <label class="col-12 text-center fw-semibold py-3" for="name">Km da percorrere</label>
+                        <input class="rounded-1" type="number" name="distance" value="" id="distance"
+                            placeholder="Distance">
+                    </div>
+
+                    <div class="col d-flex flex-wrap justify-content-center">
+                        <label class="col-12 text-center fw-semibold py-3" for="name">Fascia d'età</label>
+                        <input class="rounded-1" type="number" name="age" id="age" value="" placeholder="Age">
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="pt-3 pb-4 text-center">
+                    <button
+                        class="btn btn-outline-secondary text_my_primary fw-bold bg-body-secondary me-3">Genera</button>
+                    <button class="btn btn-outline-secondary text_my_primary fw-bold bg-body-secondary">Annulla</button>
+                </div>
+                <!-- /buttons -->
+
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- calcola prezzo form -->
+
+        <section class="tuo_biglietto">
+            <h1 class="text-center text-white fw-bolder pt-4">IL TUO BIGLIETTO</h1>
+
+            <div class="container bg-white">
+
+
+            </div>
+            <!-- /container -->
+        </section>
+        <!-- /tuo biglietto -->
 
     </main>
 

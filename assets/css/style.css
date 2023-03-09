@@ -2,6 +2,18 @@
     --my-primary: rgba(185, 20, 80, 1);
 }
 
-body {
+.bg_my_primary {
     background-color: var(--my-primary);
+}
+
+.text_my_primary {
+    color: var(--my-primary);
+}
+
+label {
+    color: var(--my-primary);
+}
+
+input {
+    border: 2px solid var(--my-primary);
 }
