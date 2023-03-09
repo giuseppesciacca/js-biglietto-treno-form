@@ -6,18 +6,25 @@
     background-color: var(--my-primary);
 }
 
-.text_my_primary {
-    color: var(--my-primary);
+.bg_my_secondary {
+    background-color: grey !important;
 }
 
+.text_my_primary,
 label {
     color: var(--my-primary);
 }
 
-input, select {
+input,
+select {
     border: 2px solid var(--my-primary);
 }
 
-.nome_pass {
-    background-color: grey;
+button:hover {
+    color: var(--my-primary) !important;
+    border: 2px solid orange !important;
+}
+
+button:active {
+    scale: 0.9;
 }

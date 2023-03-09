@@ -54,5 +54,4 @@ document.getElementById('erase').addEventListener('click', function () {
     name.value = "";
     distance.value = "";
     age.value = "";
-})
-
+});
