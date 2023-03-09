@@ -15,10 +15,24 @@ const age = document.getElementById('age').value;
 
 const distance = document.getElementById('distance').value;
 
-//reagisco al click del button, test
+//reagisco al click del button
 document.querySelector('button').addEventListener('click', function () {
     console.log(age);
     console.log(distance);
+
+    let totalPrice = unitPrice * distance;
+    if (age < 18) {
+        const discount = totalPrice * discountUnder
+        const discountAmount = totalPrice - discount
+        console.log(discountAmount)
+    } else if (age > 65) {
+        const discount = totalPrice * discountOver
+        const discountAmount = totalPrice - discount
+        console.log(discountAmount)
+    } else {
+        let totalPrice = unitPrice * distance;
+        console.log(totalPrice)
+    };
 })
 
 
